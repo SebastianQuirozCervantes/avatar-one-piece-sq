@@ -32,7 +32,6 @@ const ExpandMore = styled((props) => {
 
 const MovieCard = ({ movieInfo }) => {
   const navigate = useNavigate();
-    console.log("MOVIE INFO", movieInfo)
   const { title, images, aired, synopsis, studios, score, duration, genres, mal_id } = movieInfo
   const [expanded, setExpanded] = React.useState(false);
 

@@ -15,7 +15,7 @@ const Movies = () => {
                     <SkeletonCard />
                 </Grid>)))
                 : data?.data?.map((e, idx) => (
-                <Grid md={3} key={idx} item>
+                <Grid md={3} xs={12} key={idx} item>
                     <MovieCard movieInfo={e}/>
                 </Grid>
                 ))
