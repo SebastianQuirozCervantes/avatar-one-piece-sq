@@ -42,7 +42,7 @@ const ModalCharacter = (props) => {
                     isLoading ? (<SkeletonCard />)
                     : (
                         <Grid container spacing={3}>
-                            <Grid item md={12} style={{display: 'flex', justifyContent: 'end'}}>
+                            <Grid item md={12} className='d-flex j-content-end'>
                                 <Button onClick={handleClose}><img src={X} alt="close" style={{height: '3rem'}}/> </Button>
                             </Grid>
                             <Grid item md={3}>
@@ -51,26 +51,26 @@ const ModalCharacter = (props) => {
                             <Grid item md={9}>
                                 <Typography>{data?.data?.name}</Typography>
                                 <Typography variant="body2" color="text.secondary">{data?.data?.name_kanji}</Typography>
-                                <Typography paragraph variant="body2" color="text.secondary" style={{textAlign: 'justify', maxHeight: '10rem', overflowY: 'auto'}}>{data?.data?.about}</Typography>
+                                <Typography paragraph variant="body2" color="text.secondary" className='text-align-justify max-height-10 overflow-y-auto'>{data?.data?.about}</Typography>
                                 <Grid container>
                                     <Grid item md={6}>
                                         <Typography>Voices: </Typography>
                                         {
                                             spanishVoice && (
-                                            <Typography style={{display: 'flex', alignItems: 'center'}}>
-                                                <img src={Espana} alt="España" style={{height: '40px'}} />&nbsp;{spanishVoice?.person?.name}
+                                            <Typography className='d-flex a-center'>
+                                                <img src={Espana} alt="España" className='image-flag-height' />&nbsp;{spanishVoice?.person?.name}
                                             </Typography>)
                                         }
                                         {
                                             englishVoice && (
-                                            <Typography style={{display: 'flex', alignItems: 'center'}}>
-                                                <img src={EstadosUnidos} alt="España" style={{height: '40px'}} />&nbsp;{englishVoice?.person?.name}
+                                            <Typography className='d-flex a-center'>
+                                                <img src={EstadosUnidos} alt="Estados Unidos" className='image-flag-height'/>&nbsp;{englishVoice?.person?.name}
                                             </Typography>)
                                         }
                                         {
                                             japaneseVoice && (
-                                            <Typography style={{display: 'flex', alignItems: 'center'}}>
-                                                <img src={Japon} alt="España" style={{height: '40px'}} />&nbsp;{japaneseVoice?.person?.name}
+                                            <Typography className='d-flex a-center'>
+                                                <img src={Japon} alt="Japon" className='image-flag-height' />&nbsp;{japaneseVoice?.person?.name}
                                             </Typography>)
                                         }
                                     </Grid>
@@ -78,7 +78,7 @@ const ModalCharacter = (props) => {
                                         <Typography>Nicknames: </Typography>
                                         {
                                             data?.data?.nicknames.map((nickname, idx) => (
-                                            <Typography key={idx} paragraph variant="body2" color="text.secondary" style={{margin: '0px'}}>◉{nickname}</Typography>
+                                            <Typography key={idx} paragraph variant="body2" color="text.secondary" className='m-0'>◉{nickname}</Typography>
                                             ))
                                         }
                                     </Grid>

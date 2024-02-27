@@ -14,7 +14,7 @@ import './App.css';
 function App() {
   return (
     <Grid container>
-      <AppBar position="static" style={{backgroundColor: '#C6BE24'}}>
+      <AppBar position="static" className="app-bar-color">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <img src={OnePieceLogo} alt="One piece" style={{height: '7rem'}}/>

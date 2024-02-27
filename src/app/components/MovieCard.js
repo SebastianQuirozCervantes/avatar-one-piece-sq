@@ -45,7 +45,7 @@ const MovieCard = ({ movieInfo }) => {
       <CardHeader
         title={title}
         subheader={aired.string}
-        style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}
+        className='text-custom-overflow'
       />
       <CardMedia
         component="img"
@@ -91,7 +91,7 @@ const MovieCard = ({ movieInfo }) => {
           <Typography paragraph >Title</Typography>
           <Typography paragraph variant="body2" color="text.secondary">{title}</Typography>
           <Typography paragraph>Sinopsis</Typography>
-          <Typography paragraph style={{textAlign: 'justify'}} variant="body2" color="text.secondary">{synopsis ? synopsis : 'No information'}</Typography>
+          <Typography paragraph className='text-align-justify' variant="body2" color="text.secondary">{synopsis ? synopsis : 'No information'}</Typography>
         </CardContent>
       </Collapse>
     </Card>

@@ -6,10 +6,9 @@ import Grid from "@mui/material/Grid";
 const Movies = () => {
     const apiUrl = process.env.REACT_APP_URL_API;
     const { data, isLoading } = useFetch(`${apiUrl}/anime?q=one piece&type=Movie`)
-    console.log(data)
     const emptyArray = new Array(8).fill(0)
     return (
-        <Grid container spacing={1} style={{padding: '1rem 10rem'}}>
+        <Grid container spacing={1} className="container-padding">
             { isLoading ? (
                 emptyArray.map((e, idx) =>(
                 <Grid md={3} key={idx} item>

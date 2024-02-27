@@ -8,7 +8,6 @@ const CharacterCard = ({ characterInfo, setCharacterId, handleOpen }) => {
   const { role, character} = characterInfo
   
   const loadCharacter = () => {
-    console.log(character?.mal_id)
     setCharacterId(character?.mal_id)
     handleOpen();
   };
@@ -17,7 +16,7 @@ const CharacterCard = ({ characterInfo, setCharacterId, handleOpen }) => {
       <CardHeader
         title={character?.name}
         subheader={role}
-        style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}
+        className='text-custom-overflow'
       />
       <div className='container-over-image'>
           <CardMedia

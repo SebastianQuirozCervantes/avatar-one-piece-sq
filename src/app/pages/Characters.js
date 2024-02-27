@@ -17,7 +17,7 @@ const Characters = () => {
     const handleClose = () => setOpen(false);
     const emptyArray = new Array(8).fill(0)
     return (
-        <Grid style={{padding: '1rem 10rem'}}>
+        <Grid className='container-padding'>
             <Grid container spacing={3}>
                 { isLoading ? (
                    emptyArray.map((e, idx) =>(
@@ -33,10 +33,9 @@ const Characters = () => {
                         />
                     </Grid>
                     ))
-                : (<Grid container>
-                    <Grid item md={3} style={{marginLeft: '30%'}}>
-                        <img src={NotFound} alt="Not Found" style={{maxHeight: '50vh'}}/>
-                    </Grid>
+                : (
+                    <Grid item md={12} className="d-flex j-content-center">
+                        <img src={NotFound} alt="Not Found" className='max-width-50'/>
                     </Grid>)
                 }
             </Grid>

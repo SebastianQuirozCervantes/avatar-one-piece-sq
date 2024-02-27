@@ -3,8 +3,8 @@ import { Grid } from "@mui/material"
 const NotFound = () => {
     return (
     <Grid container>
-        <Grid item md={12} style={{justifyContent: 'center', display: 'flex'}}>
-            <img src={NotFoundImg} alt="Not Found" style={{maxWidth: '50vw'}}/>
+        <Grid item md={12} className="d-flex j-content-center">
+            <img src={NotFoundImg} alt="Not Found" className='max-width-50'/>
         </Grid>
     </Grid>)
 }
